@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Loading Screen -->
+      <div id="loading" class="quiz-card loading">
+        <div class="spinner"></div>
+        <p>Loading quiz questions...</p>
+      </div>
+
+      <!-- Quiz Container -->
+      <div id="quiz-container" class="quiz-card hide">
+        <div class="quiz-header">
+          <div class="quiz-meta">
+            <span id="question-number">Question 1 of 5</span>
+            <span id="score">Score: 0</span>
+          </div>
+          <div class="progress-container">
+            <div
+              id="progress-bar"
+              class="progress-bar"
+              style="width: 20%"></div>
+          </div>
+        </div>
+
+        <div id="question-container">
+          <h2 id="question" class="question">Question text goes here</h2>
+          <div id="options" class="options">
+            <!-- Options will be added here dynamically -->
+          </div>
+        </div>
+
+        <div id="feedback" class="feedback hide">
+          <h3 id="feedback-text">Feedback text</h3>
+          <p id="correct-answer" class="hide">
+            The correct answer was: <span></span>
+          </p>
+          <button id="next-button" class="btn">Next Question</button>
+        </div>
+      </div>
+
+      <!-- Results Screen -->
+      <div id="results" class="quiz-card results hide">
+        <h2>Quiz Completed!</h2>
+        <p id="final-score" class="score">Your score: 0 out of 5</p>
+        <p id="result-message" class="message">Great job!</p>
+        <button id="restart-button" class="btn">Take Another Quiz</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
